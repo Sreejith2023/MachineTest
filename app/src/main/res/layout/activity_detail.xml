@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="model"
+            type="app.com.whiterabbittest.data.local.EmployeeTable" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_margin="5dp"
+        >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.DetailActivity">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_profile"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_profile"
+        android:text="@{model.name}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        android:text="@{model.userName}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        android:text="@{model.email}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email"
+        android:text="@{model.phone}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_website"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_phone"
+        android:text="@{model.website}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_street"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_website"
+        android:text="@{model.street}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_suit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_street"
+        android:text="@{model.suite}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_suit"
+        android:text="@{model.companyName}"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_company_catch_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_company_name"
+        android:text="@{model.catchPhrase}"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="app.com.whiterabbittest.data.local.EmployeeTable" />
+
+        <variable
+            name="itemClicked"
+            type="app.com.whiterabbittest.model.CustomClickListener" />
+
+    </data>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="6dp"
+    android:onClick="@{() -> itemClicked.cardClicked(model)}"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_profile"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/txt_company_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{model.name}"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_profile"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name"
+            android:text="@{model.companyName}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>
